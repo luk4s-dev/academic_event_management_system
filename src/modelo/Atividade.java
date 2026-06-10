@@ -69,7 +69,7 @@ public abstract class Atividade {
     }
 
 
-    public abstract int calcularCusto();
+    public abstract double calcularCusto();
 
     public abstract String obterTipoAtividade();
 
