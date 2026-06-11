@@ -65,7 +65,7 @@ public abstract class Atividade {
     }
 
     public Set<Participante> getParticipantesInscritos() {
-        return participantesInscritos;
+        return new HashSet<>(participantesInscritos);
     }
 
 
