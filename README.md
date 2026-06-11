@@ -1,18 +1,49 @@
-## Getting Started
+## Instruções de Compilação
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+### Pré-requisitos
+- Java Development Kit (JDK) 8 ou superior
+- Compilador Java (javac)
 
-## Folder Structure
+### Compilar o Sistema
 
-The workspace contains two folders by default, where:
+#### Opção 1: Compilar todos os arquivos (recomendado)
+```bash
+javac -d bin src/modelo/*.java src/sistema/*.java src/Main.java
+```
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+#### Opção 2: Compilar incrementalmente
+```bash
+# Compilar as classes de modelo
+javac -d bin src/modelo/*.java
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+# Compilar o sistema
+javac -d bin -cp bin src/sistema/*.java
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+# Compilar a classe principal
+javac -d bin -cp bin src/Main.java
+```
 
-## Dependency Management
+#### Opção 3: Usar VS Code (recomendado)
+- Abra o arquivo `src/Main.java`
+- Clique em **Run** acima da função `main()` ou pressione `Ctrl+F5`
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Executar o Sistema
+
+#### Via linha de comando
+```bash
+java -cp bin Main
+```
+
+#### Via VS Code
+- Abra o arquivo `src/Main.java`
+- Clique em **Run** ou pressione `Ctrl+F5`
+
+### Estrutura de Compilação
+- **Código-fonte**: `src/` (contém as classes do modelo e o sistema)
+- **Saída compilada**: `bin/` (arquivos .class gerados automaticamente)
+- **Bibliotecas externas**: `lib/` (para dependências adicionais, se houver)
+
+### Notas Importantes
+- Todos os arquivos .class compilados serão gerados em `bin/`
+- O classpath padrão está configurado em `.vscode/settings.json`
+- Certifique-se de que o JDK está instalado e configurado no PATH do sistema
