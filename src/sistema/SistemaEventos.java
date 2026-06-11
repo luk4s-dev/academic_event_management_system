@@ -138,7 +138,7 @@ public class SistemaEventos {
             return false;
         }
 
-        boolean inscrito = atividade.inscreverParticipante(participante);
+        boolean inscrito = atividade.inscreverParticipantes(participante);
 
         if (inscrito) {
             participante.adicionarAtividadeFrequentada(atividade);

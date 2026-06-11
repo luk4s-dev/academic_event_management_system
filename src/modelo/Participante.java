@@ -74,8 +74,24 @@ public class Participante extends Pessoa {
         return false;
     }
 
-    public void calcularTotalHoras() {}
+    public int calcularTotalHoras() {
+        int totalHoras = 0;
 
-    public void calcularCustoTotal() {}
+        for (Atividade atividade : atividadesFrequentadas) {
+        totalHoras += atividade.getCargaHoraria();
+        }
+
+        return totalHoras;
+    }
+
+    public double calcularCustoTotal() {
+        double totalCusto = 0;
+
+        for (Atividade atividade : atividadesFrequentadas) {
+            totalCusto += atividade.calcularCusto();
+        }
+
+        return totalCusto;
+    }
 
 }
