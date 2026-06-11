@@ -22,7 +22,7 @@ public class SistemaEventos {
         palestrantesPorCpf = new HashMap<>();
         atividades = new ArrayList<>();
 
-        diasFuncionamento = new String[5];
+        diasFuncionamento = new String[7];
 
         // Preenchendo o array de dias
         inicializarDias();
@@ -34,6 +34,8 @@ public class SistemaEventos {
         diasFuncionamento[2] = "Quarta-feira";
         diasFuncionamento[3] = "Quinta-feira";
         diasFuncionamento[4] = "Sexta-feira";
+        diasFuncionamento[5] = "Sábado";
+        diasFuncionamento[6] = "Domingo";
     }
 
     public boolean cadastrarParticipante(Participante participante) {

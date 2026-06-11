@@ -59,7 +59,7 @@ public class Minicurso extends Atividade {
             return 0;
         }
 
-        double menor = 0;
+        double menor = avaliacoes[0];
 
         for(int i = 1; i < numAvaliacoes; i++) {
             if (avaliacoes[i] < menor) {
